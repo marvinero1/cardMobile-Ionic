@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tabla Visualización
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-button color="primary" (click)='viewInfo()'>Json external</ion-button>
+    <ion-button color="secondary" (click)='viewInfoIonic()'>Node Js</ion-button>
+  </div>
+  <br>
+  <ion-list>
+    <ion-item *ngFor="let empresa of empresas">
+      <table id="t01" responsive>
+        <tr>
+          <th>ID</th>
+          <th>Nombre Empresa</th>
+          <th>Direccion</th>
+          <th>telefono</th>
+          <th>Celular</th>
+          <th>Correo </th>
+        </tr>
+        <tr>
+          <td>{{empresa.id}}</td>
+          <td>{{empresa.nombre}}</td>
+          <td>{{empresa.direccion}}</td>
+          <td>{{empresa.telefono}}</td>
+          <td>{{empresa.celular}}</td>
+          <td>{{empresa.correo_electronico}}</td>
+        </tr>
+      </table>
+    </ion-item>
+  </ion-list>
+</ion-content>
