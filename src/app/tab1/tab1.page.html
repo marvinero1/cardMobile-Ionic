@@ -12,10 +12,19 @@
     <ion-button color="secondary" (click)='viewInfoIonic()'>Node Js</ion-button>
   </div>
   <br>
-  <ion-list>
-    <ion-item *ngFor="let empresa of empresas">
-      <table id="t01" responsive>
-        <tr>
+  <ion-list >
+    <ion-item >
+      <table id="t01" class="js-sort-table" id="demo1"  responsive>
+        <caption>&lt;table class="js-sort-table"&gt;</caption>
+        <thead>           
+          <tr>           
+              <th class="js-sort-number">Row</th>            
+              <th>Strings</th>       
+              <th class="js-sort-date">Dates</th>         
+          </tr>          
+          </thead>
+            
+        <tr >
           <th>ID</th>
           <th>Nombre Empresa</th>
           <th>Direccion</th>
@@ -23,7 +32,7 @@
           <th>Celular</th>
           <th>Correo </th>
         </tr>
-        <tr>
+        <tr *ngFor="let empresa of empresas">
           <td>{{empresa.id}}</td>
           <td>{{empresa.nombre}}</td>
           <td>{{empresa.direccion}}</td>
